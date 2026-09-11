@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Somewhere Between</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .res-section{padding:20px 48px 80px;}
+  .res-block{padding:56px 0;border-top:1px solid var(--line);}
+  .res-block:first-child{border-top:none;}
+  .res-block h2{font-size:30px;margin-bottom:8px;}
+  .res-block p.desc{color:var(--ink-soft);max-width:520px;margin-bottom:32px;}
+  .res-list{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+  .res-item h3{font-size:19px;margin-bottom:8px;}
+  .res-item p{color:var(--ink-soft);font-size:14.5px;line-height:1.7;}
+  .res-item a.link{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--clay);border-bottom:1px solid var(--clay);padding-bottom:2px;}
+
+  .crisis{
+    background:var(--stone);
+    padding:50px 48px;
+    margin:0 0 20px;
+  }
+  .crisis h2{font-size:26px;margin-bottom:14px;}
+  .crisis p{color:var(--ink-soft);max-width:600px;margin-bottom:24px;}
+  .crisis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .crisis-item{background:var(--paper);padding:22px 24px;}
+  .crisis-item strong{display:block;font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:6px;}
+  .crisis-item span{font-size:14px;color:var(--ink-soft);}
+
+  @media (max-width:960px){
+    .res-section{padding:16px 22px 60px;}
+    .res-list{grid-template-columns:1fr;}
+    .crisis{padding:40px 22px;}
+    .crisis-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a href="index.html" class="logo">somewhere <em>between</em></a>
+  <nav class="main">
+    <a href="index.html">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <div class="header-right"><span class="pill-note">You're not alone</span></div>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero wrap">
+  <span class="eyebrow">resources</span>
+  <h1>Trusted support, when you need it.</h1>
+  <p class="lede">Small steps, big change — a starting point, not a substitute for professional care.</p>
+</section>
+
+<div class="crisis wrap">
+  <h2>If you're in crisis right now</h2>
+  <p>If you are in immediate danger, please contact local emergency services. These lines are free, confidential, and available around the clock.</p>
+  <div class="crisis-grid">
+    <div class="crisis-item">
+      <strong>988 Suicide &amp; Crisis Lifeline</strong>
+      <span>Call or text 988 (US) — 24/7 support for anyone in emotional distress.</span>
+    </div>
+    <div class="crisis-item">
+      <strong>Crisis Text Line</strong>
+      <span>Text HOME to 741741 — free, 24/7 support by text message.</span>
+    </div>
+    <div class="crisis-item">
+      <strong>National Alliance for Eating Disorders</strong>
+      <span>Call 1-866-662-1235 — helpline for eating disorder support.</span>
+    </div>
+  </div>
+</div>
+
+<section class="res-section wrap">
+  <div class="res-block">
+    <h2>Reading &amp; reflection</h2>
+    <p class="desc">Books and practices that pair well with a slow morning and a cup of tea.</p>
+    <div class="res-list">
+      <div class="res-item">
+        <h3>Journaling prompts</h3>
+        <p>A rotating set of gentle prompts for the days you don't know where to start.</p>
+        <a href="journals.html" class="link">Browse Journals</a>
+      </div>
+      <div class="res-item">
+        <h3>Grounding techniques</h3>
+        <p>Simple breathing and sensory exercises for when things feel like too much.</p>
+        <a href="#" class="link">Learn More</a>
+      </div>
+      <div class="res-item">
+        <h3>Building self-worth</h3>
+        <p>Reframing the stories we tell ourselves about what we deserve.</p>
+        <a href="journals.html" class="link">Read Stories</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="res-block">
+    <h2>Finding professional support</h2>
+    <p class="desc">Because some things are better carried with someone trained to help you carry them.</p>
+    <div class="res-list">
+      <div class="res-item">
+        <h3>Finding a therapist</h3>
+        <p>Directories and questions to ask when you're ready to look for a professional.</p>
+        <a href="#" class="link">Get Started</a>
+      </div>
+      <div class="res-item">
+        <h3>Support groups</h3>
+        <p>Community spaces, in person and online, for shared experiences.</p>
+        <a href="#" class="link">Find a Group</a>
+      </div>
+      <div class="res-item">
+        <h3>Talking to family</h3>
+        <p>Starting the conversation with people close to you, at your own pace.</p>
+        <a href="#" class="link">Read the Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo">somewhere <em>between</em></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="journals.html">Journals</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-row"><a href="#">IG</a><a href="#">TT</a><a href="#">SP</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Somewhere Between. All rights reserved.</span>
+      <em>You are enough.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
