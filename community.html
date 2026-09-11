@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — Somewhere Between</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .share-section{padding:20px 48px 90px;}
+  .share-box{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:40px;
+    max-width:760px;
+    margin:0 auto 60px;
+  }
+  .share-box textarea{
+    width:100%;background:var(--bg);border:1px solid var(--line);
+    padding:16px;font-family:'Jost',sans-serif;font-size:15px;color:var(--ink);
+    min-height:120px;resize:vertical;border-radius:2px;margin-bottom:18px;
+  }
+  .share-box textarea:focus{outline:none;border-color:var(--sage-deep);}
+  .share-box .fine{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+
+  .stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);max-width:1100px;margin:0 auto;}
+  .story-card{background:var(--bg);padding:30px 28px;}
+  .story-card p.quote{font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.5;color:var(--ink);margin-bottom:16px;}
+  .story-card span.who{font-size:13px;color:var(--ink-soft);letter-spacing:.03em;}
+
+  .cards-section{padding:90px 48px;background:var(--paper);border-top:1px solid var(--line);}
+  .cards-head{max-width:600px;margin:0 auto 50px;text-align:center;}
+  .cards-head h2{font-size:36px;margin-top:6px;}
+  .cards-head p{color:var(--ink-soft);margin-top:14px;}
+
+  .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto;}
+  .kind-card{
+    background:var(--bg);border:1px solid var(--line);
+    padding:32px 26px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .kind-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(46,44,39,0.08);}
+  .kind-card .icon{font-size:26px;}
+  .kind-card p{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.4;color:var(--ink);}
+  .kind-card button{
+    margin-top:6px;padding:10px 22px;border:1px solid var(--ink);background:transparent;
+    font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+    cursor:pointer;transition:all .2s ease;
+  }
+  .kind-card button:hover{background:var(--clay);border-color:var(--clay);color:var(--paper);}
+
+  .custom-card-section{max-width:640px;margin:60px auto 0;padding-top:50px;border-top:1px solid var(--line);text-align:center;}
+  .custom-card-section h3{font-size:26px;margin-bottom:10px;}
+  .custom-card-section p{color:var(--ink-soft);font-size:15px;margin-bottom:30px;}
+  .custom-card-box{
+    background:var(--bg);border:1px solid var(--line);
+    padding:34px;text-align:left;
+  }
+  .custom-card-box label{font-size:13px;letter-spacing:.04em;color:var(--ink-soft);display:block;margin-bottom:8px;}
+  .custom-card-box select,.custom-card-box textarea{
+    width:100%;background:var(--paper);border:1px solid var(--line);
+    padding:13px 15px;font-family:'Jost',sans-serif;font-size:15px;color:var(--ink);
+    border-radius:2px;margin-bottom:20px;
+  }
+  .custom-card-box textarea{min-height:90px;resize:vertical;font-family:'Cormorant Garamond',serif;font-size:19px;}
+  .custom-card-box select:focus,.custom-card-box textarea:focus{outline:none;border-color:var(--sage-deep);}
+  .custom-preview{
+    background:var(--paper);border:1px solid var(--line);
+    padding:28px 24px;text-align:center;margin-bottom:22px;
+  }
+  .custom-preview .icon{font-size:24px;display:block;margin-bottom:10px;}
+  .custom-preview p{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);}
+
+  @media (max-width:960px){
+    .share-section{padding:16px 22px 60px;}
+    .share-box{padding:28px;}
+    .stories-grid{grid-template-columns:1fr;}
+    .cards-section{padding:56px 22px;}
+    .cards-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a href="index.html" class="logo">somewhere <em>between</em></a>
+  <nav class="main">
+    <a href="index.html">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html" class="active">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <div class="header-right"><span class="pill-note">You're not alone</span></div>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html" class="active">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="page-hero wrap">
+  <span class="eyebrow">community</span>
+  <h1>You are not alone in this.</h1>
+  <p class="lede">Different struggles, different stories, same reminder. Share what you're carrying, or send someone else a little light today.</p>
+</section>
+
+<section class="share-section wrap">
+  <div class="share-box">
+    <span class="eyebrow" style="display:block;margin-bottom:10px;">share your journey</span>
+    <h2 style="font-size:26px;margin-bottom:18px;">What do you wish someone had told you?</h2>
+    <form id="storyForm">
+      <textarea id="storyText" placeholder="Share as much or as little as feels right. You can stay anonymous." required></textarea>
+      <button type="submit" class="btn btn-primary" id="storySubmitBtn">Share My Story</button>
+    </form>
+    <p id="storyStatus" style="min-height:20px;font-size:14px;margin-top:14px;"></p>
+    <p class="fine">Stories are shared anonymously and reviewed before appearing on the site. This isn't a substitute for professional support — see our Resources page if you need it.</p>
+  </div>
+
+  <div class="stories-grid" id="storiesGrid">
+    <div class="story-card">
+      <p class="quote">"I spent years thinking rest was something I had to earn. Turns out it was never a reward — it was allowed all along."</p>
+      <span class="who">— shared anonymously</span>
+    </div>
+    <div class="story-card">
+      <p class="quote">"Letting one trustworthy person in changed how I saw every relationship after that. Slowly is still moving."</p>
+      <span class="who">— shared anonymously</span>
+    </div>
+    <div class="story-card">
+      <p class="quote">"Some days I still don't have it figured out. I've stopped treating that like a failure."</p>
+      <span class="who">— shared anonymously</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ---- Supabase config: fill these in with your own project's values ----
+  const SUPABASE_URL = "https://ctwtpeizadkzayrdhgna.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_Mt48W6pjsYPPRb7PPD8x1g_8g_t_tRC";
+  // -------------------------------------------------------------------
+
+  const storyForm = document.getElementById('storyForm');
+  const storyText = document.getElementById('storyText');
+  const storySubmitBtn = document.getElementById('storySubmitBtn');
+  const storyStatus = document.getElementById('storyStatus');
+  const storiesGrid = document.getElementById('storiesGrid');
+  const configured = !SUPABASE_URL.startsWith('YOUR_') && !SUPABASE_ANON_KEY.startsWith('YOUR_');
+
+  storyStatus.textContent = configured ? '' : '⚠️ Not connected to database yet.';
+  storyStatus.style.color = configured ? 'var(--sage-deep)' : '#b04a3a';
+
+  storyForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+    console.log('Form submitted, configured:', configured);
+    const content = storyText.value.trim();
+    if(!content){
+      storyStatus.textContent = 'Please write something first.';
+      storyStatus.style.color = '#b04a3a';
+      return;
+    }
+
+    if(!configured){
+      storyStatus.textContent = '⚠️ Story storage isn\'t connected yet.';
+      storyStatus.style.color = '#b04a3a';
+      return;
+    }
+
+    storySubmitBtn.disabled = true;
+    storySubmitBtn.textContent = 'Sharing...';
+    storyStatus.textContent = 'Submitting...';
+    storyStatus.style.color = 'var(--ink-soft)';
+
+    try{
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/stories`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ content: content, approved: false })
+      });
+      console.log('Response status:', res.status);
+      if(res.ok){
+        storyStatus.textContent = 'Thank you for sharing — it will appear once reviewed.';
+        storyStatus.style.color = 'var(--sage-deep)';
+        storyForm.reset();
+      } else {
+        const errText = await res.text();
+        console.log('Error response:', errText);
+        storyStatus.textContent = 'Error: ' + errText.slice(0, 150);
+        storyStatus.style.color = '#b04a3a';
+      }
+    } catch(err){
+      console.log('Fetch failed:', err);
+      storyStatus.textContent = 'Network error: ' + err.message;
+      storyStatus.style.color = '#b04a3a';
+    } finally {
+      storySubmitBtn.disabled = false;
+      storySubmitBtn.textContent = 'Share My Story';
+    }
+  });
+
+  async function loadApprovedStories(){
+    if(!configured) return;
+    try{
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/stories?approved=eq.true&order=created_at.desc&limit=6`, {
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+        }
+      });
+      if(!res.ok) return;
+      const rows = await res.json();
+      if(rows.length === 0) return;
+      storiesGrid.innerHTML = rows.map(r => `
+        <div class="story-card">
+          <p class="quote">"${(r.content || '').replace(/</g,'&lt;')}"</p>
+          <span class="who">— shared anonymously</span>
+        </div>
+      `).join('');
+    } catch(err){ /* keep fallback stories on failure */ }
+  }
+  loadApprovedStories();
+</script>
+
+<section class="cards-section">
+  <div class="cards-head">
+    <span class="eyebrow">send a little encouragement</span>
+    <h2>Pass along something kind.</h2>
+    <p>Pick a card and send it to someone in the community — or keep it for the days you need to hear it yourself.</p>
+  </div>
+  <div class="cards-grid">
+    <div class="kind-card">
+      <span class="icon">✶</span>
+      <p>You're doing better than you think you are.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+    <div class="kind-card">
+      <span class="icon">♡</span>
+      <p>You are enough, exactly as you are today.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+    <div class="kind-card">
+      <span class="icon">🌿</span>
+      <p>One small step still counts as moving forward.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+    <div class="kind-card">
+      <span class="icon">☀</span>
+      <p>It's okay to rest today. You don't have to earn it.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+    <div class="kind-card">
+      <span class="icon">🕊</span>
+      <p>Sending you a little strength for today.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+    <div class="kind-card">
+      <span class="icon">✦</span>
+      <p>Whatever you're carrying, you're not carrying it alone.</p>
+      <button onclick="alert('Card sent 💌')">Send This Card</button>
+    </div>
+  </div>
+
+  <div class="custom-card-section">
+    <h3>Or write your own</h3>
+    <p>Sometimes the pre-made ones don't say it quite right. Make a card in your own words.</p>
+    <div class="custom-card-box">
+      <div id="cardPreview" class="custom-preview">
+        <span class="icon" id="previewIcon">✶</span>
+        <p id="previewText">Your message will appear here.</p>
+      </div>
+      <label for="cardIcon">Choose an icon</label>
+      <select id="cardIcon" onchange="document.getElementById('previewIcon').textContent=this.value;">
+        <option value="✶">✶ star</option>
+        <option value="♡">♡ heart</option>
+        <option value="🌿">🌿 leaf</option>
+        <option value="☀">☀ sun</option>
+        <option value="🕊">🕊 dove</option>
+        <option value="✦">✦ sparkle</option>
+      </select>
+      <label for="cardText">Your message</label>
+      <textarea id="cardText" placeholder="Write something kind — to a stranger, or to yourself." oninput="document.getElementById('previewText').textContent=this.value || 'Your message will appear here.';"></textarea>
+      <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="if(document.getElementById('cardText').value.trim()){alert('Card sent 💌');}else{alert('Write a message first.');}">Send This Card</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo">somewhere <em>between</em></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="journals.html">Journals</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-row"><a href="#">IG</a><a href="#">TT</a><a href="#">SP</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Somewhere Between. All rights reserved.</span>
+      <em>You are enough.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
