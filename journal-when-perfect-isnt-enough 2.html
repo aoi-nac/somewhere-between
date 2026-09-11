@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Perfect Isn't Enough — Somewhere Between</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .entry-hero{position:relative;height:380px;}
+  .entry-hero img{width:100%;height:100%;object-fit:cover;}
+  .entry-head{padding:54px 48px 10px;max-width:760px;margin:0 auto;}
+  .entry-head a.back{font-size:13px;letter-spacing:.05em;color:var(--ink-soft);text-transform:uppercase;}
+  .entry-head a.back:hover{color:var(--ink);}
+  .entry-meta{display:flex;gap:16px;align-items:center;margin:20px 0 10px;}
+  .entry-head h1{font-size:clamp(32px,4.4vw,48px);margin-top:8px;}
+
+  .entry-body{max-width:700px;margin:0 auto;padding:20px 48px 90px;}
+  .entry-body p{color:var(--ink);font-size:18px;line-height:1.9;margin-bottom:26px;font-family:'Cormorant Garamond',serif;}
+  .entry-body p.lead{font-size:21px;color:var(--ink-soft);font-style:italic;margin-bottom:36px;}
+  .pull{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;
+    color:var(--sage-deep);text-align:center;margin:50px 0;line-height:1.4;
+    padding:0 20px;
+  }
+  .entry-footer{
+    border-top:1px solid var(--line);margin-top:40px;padding-top:36px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  }
+
+  @media (max-width:700px){
+    .entry-head{padding:40px 22px 6px;}
+    .entry-body{padding:16px 22px 60px;}
+    .entry-body p{font-size:17px;}
+    .pull{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a href="index.html" class="logo">somewhere <em>between</em></a>
+  <nav class="main">
+    <a href="index.html">Home</a>
+    <a href="journals.html" class="active">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <div class="header-right"><span class="pill-note">You're not alone</span></div>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="journals.html" class="active">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<div class="entry-hero">
+  <img src="https://images.unsplash.com/photo-1761322572550-967ea8c0bfd9?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Open journal with handwriting and a pen">
+</div>
+
+<div class="entry-head">
+  <a href="journals.html" class="back">← Back to Journals</a>
+  <div class="entry-meta">
+    <span class="tag">Perfectionism</span>
+    <span style="font-size:13px;color:var(--ink-soft);">6 min read</span>
+  </div>
+  <h1>When Perfect Isn't Enough</h1>
+</div>
+
+<article class="entry-body">
+  <p class="lead">I didn't realize I was a perfectionist at first. I thought I was just disciplined.</p>
+
+  <p>It started with wanting to become a better version of myself. I'd tell myself that if I lost a little more weight, ate cleaner, worked out harder, or stayed more consistent, I'd finally feel confident. Every goal became another finish line that kept moving further away.</p>
+
+  <p>The gym became more than just exercise. It became proof that I was trying hard enough. Missing a workout felt like failing. Eating something outside my plan made me feel guilty, and I'd spend more time thinking about how to make up for it than enjoying the moment. I wasn't listening to my body anymore — I was listening to the voice that kept saying, "You can do better."</p>
+
+  <p>It wasn't just about food or fitness. It was about control.</p>
+
+  <div class="pull">When other parts of life felt overwhelming, controlling my routine made me feel like I had everything together. But the more I chased perfection, the more impossible it became to reach.</div>
+
+  <p>Even when I made progress, I barely let myself celebrate it because I was already focused on what still wasn't enough. The hardest part was that from the outside, it probably looked healthy. I was going to the gym, setting goals, trying to improve myself. But inside, I was exhausted from constantly measuring my worth against impossible standards.</p>
+
+  <p>I'm still learning that discipline and self-worth aren't the same thing.</p>
+
+  <p>Now I'm trying to move my body because it makes me feel strong, not because I need to earn confidence. I'm learning that one meal, one missed workout, or one imperfect day doesn't erase all of my progress.</p>
+
+  <p>For so long, I believed perfection would finally make me feel enough.</p>
+
+  <p>Now I'm starting to believe that I was enough before I ever started chasing it.</p>
+</article>
+
+<div class="entry-body" style="padding-top:0;">
+  <div class="entry-footer">
+    <a href="community.html" class="btn btn-outline">Share Your Own Story →</a>
+    <a href="journals.html" class="btn btn-outline">Back to All Journals</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo">somewhere <em>between</em></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="journals.html">Journals</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-row"><a href="#">IG</a><a href="#">TT</a><a href="#">SP</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Somewhere Between. All rights reserved.</span>
+      <em>You are enough.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

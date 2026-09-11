@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somewhere Between — for when you're still figuring yourself out</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;}
+  .hero-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center;}
+  .hero-copy h1{font-size:clamp(40px,5vw,64px);margin-top:14px;}
+  .hero-copy p.lede{max-width:420px;margin-top:20px;color:var(--ink-soft);font-size:17px;line-height:1.75;}
+  .hero-photo{position:relative;min-height:620px;}
+
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .strip a{padding:38px 28px;border-right:1px solid var(--line);}
+  .strip a:last-child{border-right:none;}
+  .strip strong{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;display:block;margin-bottom:6px;}
+  .strip span{font-size:13.5px;color:var(--ink-soft);}
+
+  .section{padding:90px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:16px;}
+  .section-head h2{font-size:38px;margin-top:6px;}
+
+  .jgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);}
+  .jcard{background:var(--bg);padding-bottom:2px;display:block;}
+  .jcard .thumb{height:220px;}
+  .jcard .body{padding:22px 26px 30px;}
+  .jcard h3{font-size:21px;margin-top:10px;}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;}
+  .split-photo{min-height:480px;}
+  .split-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center;gap:20px;}
+  .split-copy p{color:var(--ink-soft);font-size:16px;max-width:440px;line-height:1.8;}
+
+  .comfort{background:var(--paper);padding:90px 48px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .comfort h2{font-size:clamp(28px,3.4vw,38px);max-width:620px;margin:0 auto 30px;}
+  .comfort ul{list-style:none;padding:0;margin:0 0 36px;display:flex;flex-direction:column;gap:10px;}
+  .comfort li{color:var(--ink-soft);font-size:16.5px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;}
+
+  @media (max-width:960px){
+    .hero{grid-template-columns:1fr;}
+    .hero-photo{min-height:340px;order:-1;}
+    .hero-copy{padding:50px 24px;}
+    .strip{grid-template-columns:repeat(2,1fr);}
+    .strip a{border-right:1px solid var(--line);}
+    .strip a:nth-child(2n){border-right:none;}
+    .jgrid{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    .split-copy{padding:56px 24px;}
+    .split-photo{min-height:300px;}
+  }
+  @media (max-width:560px){
+    .hero-copy{padding:40px 20px;}
+    .hero-photo{min-height:260px;}
+    .strip{grid-template-columns:1fr;}
+    .strip a{border-right:none !important;border-bottom:1px solid var(--line);}
+    .strip a:last-child{border-bottom:none;}
+    .jgrid{grid-template-columns:1fr;margin-left:20px !important;margin-right:20px !important;}
+    .section-head{flex-direction:column;align-items:flex-start;}
+    .comfort{padding:56px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a href="index.html" class="logo">somewhere <em>between</em></a>
+  <nav class="main">
+    <a href="index.html" class="active">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <div class="header-right">
+    <span class="pill-note">You're not alone</span>
+  </div>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="journals.html">Journals</a>
+    <a href="community.html">Community</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">a quiet place to land</span>
+    <h1>Somewhere<br>Between</h1>
+    <p style="margin-top:6px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--sage-deep);">You don't have to earn your worth. You already have it.</p>
+    <div style="margin-top:30px;"><a href="journals.html" class="btn btn-primary">Explore the Journals</a></div>
+  </div>
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1628002067566-829b37d5da69?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Woman standing in a grass field looking out at the sunset" style="width:100%;height:100%;object-fit:cover;">
+  </div>
+</section>
+
+<div class="strip">
+  <a href="journals.html">
+    <strong>Read</strong>
+    <span>Real stories, honestly told.</span>
+  </a>
+  <a href="resources.html">
+    <strong>Reflect</strong>
+    <span>Small steps, quiet change.</span>
+  </a>
+  <a href="about.html">
+    <strong>Grow</strong>
+    <span>Learn. Heal. Become.</span>
+  </a>
+  <a href="resources.html">
+    <strong>Belong</strong>
+    <span>You are not alone here.</span>
+  </a>
+</div>
+
+<section class="section wrap">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">our journals</span>
+      <h2>Real stories. Deeper healing.</h2>
+    </div>
+    <a href="journals.html" class="btn btn-outline">View All Journals</a>
+  </div>
+</section>
+<div class="jgrid" style="margin:0 48px 90px;">
+  <a href="journal-letting-myself-be-known.html" class="jcard">
+    <div class="thumb"><img src="https://images.unsplash.com/photo-1756669086471-58531cdeb0c7?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Woman looking out over a field at sunset" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="body"><span class="tag">Opening Up &amp; Trust</span><h3>Letting Myself Be Known</h3></div>
+  </a>
+  <div class="jcard">
+    <div class="thumb"><img src="https://images.unsplash.com/photo-1764494192126-9c22d4dfc94d?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Coffee cups and an open journal on a table" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="body"><span class="tag">Eating Struggles</span><h3>Making Peace With Myself</h3></div>
+  </div>
+  <a href="journal-when-perfect-isnt-enough.html" class="jcard">
+    <div class="thumb"><img src="https://images.unsplash.com/photo-1761322572550-967ea8c0bfd9?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Open journal with handwriting and a pen" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="body"><span class="tag">Perfectionism</span><h3>When Perfect Isn't Enough</h3></div>
+  </a>
+  <div class="jcard">
+    <div class="thumb"><img src="https://images.unsplash.com/photo-1599270606287-331b4f5d0e02?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Wildflowers by a lake" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="body"><span class="tag">Self-Worth</span><h3>Already Worthy</h3></div>
+  </div>
+</div>
+
+<section class="split">
+  <div class="split-photo"><img src="https://images.unsplash.com/photo-1743309411498-a0f4f4b96b65?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Mountain valley at sunset" style="width:100%;height:100%;object-fit:cover;"></div>
+  <div class="split-copy">
+    <span class="eyebrow">our story</span>
+    <h2 style="font-size:36px;">This space is for you.</h2>
+    <p>I created Somewhere Between because I learned the hard way that you can spend so much time trying to become better that you forget to take care of the person you're trying to be.</p>
+    <p>This is a place for the things we don't always know how to say — self-worth, perfectionism, opening up, trust, and everything in between.</p>
+    <div style="margin-top:6px;"><a href="about.html" class="btn btn-outline">Read My Story</a></div>
+  </div>
+</section>
+
+<section class="comfort">
+  <span class="eyebrow" style="display:block;margin-bottom:18px;">for the days you feel like you're not enough</span>
+  <h2>You don't have to fix everything today.</h2>
+  <ul>
+    <li>Take a breath.</li>
+    <li>Put the pressure down for a moment.</li>
+    <li>You are allowed to rest.</li>
+    <li>You are still becoming.</li>
+  </ul>
+  <a href="journals.html" class="btn btn-primary">Give Me Something to Read</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo">somewhere <em>between</em></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="journals.html">Journals</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-row">
+        <a href="#">IG</a><a href="#">TT</a><a href="#">SP</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Somewhere Between. All rights reserved.</span>
+      <em>You are enough.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
